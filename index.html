@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms And Tables</title>
+</head>
+
+<body>
+    <!-- Chapter no 6 -->
+    <!-- Tables -->
+
+    <table border="2px">
+        <!-- <tr>
+       <td>Name</td>
+       <td>Age</td>
+       <td>Class</td>
+    </tr> -->
+
+
+        <th>Name</th>
+        <th>Age</th>
+        <th>Class</th>
+
+        <tr>
+            <!-- colspan is merge the column in td tag && rowlspan is merge the  in td tag -->
+
+
+            <td colspan="2" rowspan="2">Adnan</td>
+            <td>20</td>
+            <td>13<sup>th</sup></td>
+        </tr>
+        <tr>
+            <td>Zeeshan</td>
+            <td>19</td>
+            <td>12<sup>th</sup></td>
+        </tr>
+    </table>
+
+
+    <!-- Another table with "thead","tbody","tfoot" -->
+
+
+    <table>
+        <!-- thead tag is a uppar part of table  -->
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Income</th>
+                <th>Expenditure</th>
+            </tr>
+        </thead>
+        <!-- tbody tag is a center part of table  -->
+        <tbody>
+            <tr>
+                <th>1st January</th>
+                <td>250</td>
+                <td>36</td>
+            </tr>
+            <tr>
+                <th>2nd January</th>
+                <td>285</td>
+                <td>48</td>
+            </tr>
+            <!-- additional rows as above -->
+            <tr>
+                <th>31st January</th>
+                <td>129</td>
+                <td>64</td>
+            </tr>
+        </tbody>
+        <!-- tfoot tag is a bottom part  of table  -->
+        <tfoot>
+            <tr>
+                <td></td>
+                <td>7824</td>
+                <td>1241</td>
+            </tr>
+        </tfoot>
+    </table>
+
+
+    <!-- chapter no 7 -->
+
+    <!-- Forms -->
+
+
+
+    <!-- In this form "action" tag is work for database link where tha data of form 
+        will be saved and the method is doing a get such as we are taking data in form  -->
+    <form action="http://www.example.com/subscribe.php" method="get">
+        <p>This is where the form controls will appear.
+        </p>
+    </form>
+
+    <!-- Textfield -->
+
+    <form action="http://www.example.com/login.php">
+        <p>Username:
+            <input type="text" name="Username" size="15" maxlength="30" />
+        </p>
+    </form>
+
+    <!-- This is textfield but this also called as Comment box or a Textarea -->
+
+    <form action="http://www.example.com/comments.php">
+        <p>What did you think of this gig?</p>
+        <textarea name="comments" cols="20" rows="4">Enter your comments...</textarea>
+
+        <!-- Radio Button -->
+
+        <p>
+            Gender:
+            male: <input type="radio" name="gender" value="male" id="" checked="checked">
+            female: <input type="radio" name="gender" value="female" id="">
+            others : <input type="radio" name="gender" value="others" id="">
+
+            <br>
+
+            Select Dishes:
+            <input type="checkbox" name="biryani" value="Biryani"> Biryani
+            <input type="checkbox" name="biryani" value="Qorma"> Qorma
+            <input type="checkbox" name="biryani" value="LabeSheeren"> LabeSheeren
+            <input type="checkbox" name="biryani" value="Mango"> Mango
+        </p>
+    </form>
+
+    <!-- For any validation it should must to the textfield should be in form tag -->
+
+    <form action="">
+        <!-- Drop Down List -->
+        <select name="country" size="3" multiple="multiple">
+            <option value="pakistan">pakistan</option>
+            <option selected value="India">India</option>
+            <option value="UK">UK</option>
+            <option value="Srilanka">Srilanka</option>
+
+        </select>
+
+        <!-- Any File uploading method -->
+        <p>
+            Upload File
+            <input type="File" name="User File">
+
+        </p>
+
+        <!-- Buttons -->
+        <p>
+            Submit your data
+            <input type="submit" value="button">
+            <button type="submit">Submit</button>
+            <input width="100" type="image"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9yvBu7Oy-jxkSmwVqVZN4FChcO1lphGJePg&usqp=CAU"
+                alt="">
+        </p>
+
+        <p>
+            <label for="username">Username</label>
+            <input required type="text" name="username" id="username">
+        </p>
+
+
+        <!-- "label" tag is for textfield name "date"  -->
+
+
+
+        <fieldset>
+            <legend>Personal Details</legend>
+
+            <p>
+                <label for="1">Username</label>
+                <input required="required" type="text" name="username" id="1">
+            </p>
+            <p>
+                <label for="2">Username</label>
+                <input required="required" type="date" name="data" id="2">
+            </p>
+            <p>
+                Submit your data
+                <input type="submit" value="submit">
+            </p>
+        </fieldset>
+
+    </form>
+
+
+
+
+    <form action="">
+        <p>Please enter your email address:</p>
+        <input type="email" name="email" />
+        <input required type="submit" value="Submit" />
+    </form>
+
+
+    <form action="http://www.example.org/subscribe.php">
+        <p>Please enter your website url:</p>
+        <input type="url" name="url" />
+        <input type="submit" value="Submit" />
+    </form>
+
+
+    <form action="http://www.example.org/subscribe.php">
+        <p>Search:</p>
+        <input type="search" name="search" placeholder="Enter Keyword" />
+        <input type="submit" value="Submit" />
+        </form>
+
+</body>
+
+</html>
